@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="gameclient.snes9x-next"
+		name="Snes9x-Next"
+		version="1.52.6"
+		provider-name="Libretro">
+	<requires>
+		<import addon="xbmc.libretro" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.gameclient"
+			library_android=""
+			library_linux="snes9x_next_libretro.so"
+			library_osx=""
+			library_windx=""
+			library_wingl="">
+		<platforms>SNES</platforms>
+		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
+		<allowvfs>true</allowvfs>
+		<blockextract>false</blockextract>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Snes9x-Next v1.52.4</summary>
+		<description>Snes9x-Next is based on Snes9x, but has been heavily modified/speed-hacked to achieve better speed.
+
+Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
+
+Icon credit: Alucryd (alucryd.deviantart.com)
+
+Source: https://github.com/libretro/snes9x-next</description>
+		<platform>linux</platform>
+		<nofanart>true</nofanart>
+		
+	</extension>
+</addon>
