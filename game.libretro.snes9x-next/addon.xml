@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="gameclient.snes9x-next"
+<addon id="game.libretro.snes9x-next"
 		name="Snes9x-Next"
 		version="1.52.6"
 		provider-name="Libretro">
 	<requires>
-		<import addon="xbmc.libretro" version="1.0.0"/>
+		<import addon="game.libretro" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.gameclient"
-			library_android=""
-			library_linux="snes9x_next_libretro.so"
-			library_osx=""
-			library_windx=""
-			library_wingl="">
+	<extension point="kodi.gameclient"
+                   library_android="libgame.libretro.snes9x-next.so"
+                   library_linux="game.libretro.snes9x-next.so"
+                   library_osx="game.libretro.snes9x-next.dylib"
+                   library_windx="game.libretro.snes9x-next.dll"
+                   library_wingl="game.libretro.snes9x-next.dll">
 		<platforms>SNES</platforms>
 		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
 		<allowvfs>true</allowvfs>
@@ -26,8 +26,6 @@ Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
 Icon credit: Alucryd (alucryd.deviantart.com)
 
 Source: https://github.com/libretro/snes9x-next</description>
-		<platform>linux</platform>
-		<nofanart>true</nofanart>
-		
+		<platform>all</platform>
 	</extension>
 </addon>
