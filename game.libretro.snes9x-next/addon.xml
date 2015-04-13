@@ -5,6 +5,7 @@
 		provider-name="Libretro">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
+		<import addon="game.controller.snes" version="1.0.0"/>
 	</requires>
 	<extension point="kodi.gameclient"
                    library_android="libgame.libretro.snes9x-next.so"
@@ -23,9 +24,9 @@
 
 Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
 
-Icon credit: Alucryd (alucryd.deviantart.com)
+License: Non-commercial
 
-Source: https://github.com/libretro/snes9x-next</description>
+Icon credit: Alucryd (alucryd.deviantart.com)</description>
 		<platform>all</platform>
 	</extension>
 </addon>
