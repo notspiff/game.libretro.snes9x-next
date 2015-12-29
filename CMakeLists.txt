@@ -7,41 +7,11 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
+find_package(libretro-snes9x-next REQUIRED)
 
-if(CMAKE_BUILD_TYPE MATCHES Debug)
-  set(LIBRETRO_DEBUG DEBUG=1)
-endif()
+set(DEPLIBS snes9x-next)
+set(SNES9X-NEXT_CUSTOM_BINARY ${SNES9X-NEXT_LIB}
+                              ${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX} snes9x-next)
 
-if("${CORE_SYSTEM_NAME}" STREQUAL "windows")
-  set(BUILD_COMMAND mingw32-make -f Makefile.libretro platform=win ${LIBRETRO_DEBUG})
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "linux")
-  set(BUILD_COMMAND make -f Makefile.libretro ${LIBRETRO_DEBUG})
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "darwin")
-  set(BUILD_COMMAND make -f Makefile.libretro platform=osx ${LIBRETRO_DEBUG})
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "ios")
-  # TODO
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "android")
-  # TODO
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "rbpi")
-  # TODO
-elseif("${CORE_SYSTEM_NAME}" STREQUAL "freebsd")
-# TODO
-endif()
+build_addon(${PROJECT_NAME} SNES9X-NEXT DEPLIBS)
 
-include(ExternalProject)
-externalproject_add(snes9x-next
-                    GIT_REPOSITORY https://github.com/libretro/snes9x-next
-                    GIT_TAG 1228cb2
-                    PREFIX snes9x-next
-                    CONFIGURE_COMMAND ""
-                    INSTALL_COMMAND ""
-                    BUILD_COMMAND ${BUILD_COMMAND}
-                    BUILD_IN_SOURCE 1)
-
-set(SNES9X-NEXT_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/snes9x-next/src/snes9x-next/snes9x_next_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
-                              game.libretro.snes9x-next${CMAKE_SHARED_LIBRARY_SUFFIX} snes9x-next)
-
-build_addon(game.libretro.snes9x-next SNES9X-NEXT DEPLIBS)
-add_dependencies(game.libretro.snes9x-next snes9x-next)
-
-include(CPack)

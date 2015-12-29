@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.snes9x-next"
-		name="Snes9x-Next"
+		name="SNES (Snes9x-Next)"
 		version="1.52.4"
 		provider-name="Libretro">
 	<requires>
