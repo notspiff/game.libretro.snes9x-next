@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttonmap>
+  <controller id="game.controller.snes" type="joypad">
+    <feature name="a" mapto="a"/>
+    <feature name="b" mapto="b"/>
+    <feature name="x" mapto="x"/>
+    <feature name="y" mapto="y"/>
+    <feature name="start" mapto="start"/>
+    <feature name="select" mapto="select"/>
+    <feature name="up" mapto="up"/>
+    <feature name="down" mapto="down"/>
+    <feature name="right" mapto="right"/>
+    <feature name="left" mapto="left"/>
+    <feature name="rightbumper" mapto="l"/>
+    <feature name="leftbumper" mapto="r"/>
+  </controller>
+</buttonmap>
