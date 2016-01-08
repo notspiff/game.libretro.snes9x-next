@@ -11,7 +11,7 @@
     <feature name="down" mapto="down"/>
     <feature name="right" mapto="right"/>
     <feature name="left" mapto="left"/>
-    <feature name="rightbumper" mapto="l"/>
-    <feature name="leftbumper" mapto="r"/>
+    <feature name="rightbumper" mapto="r"/>
+    <feature name="leftbumper" mapto="l"/>
   </controller>
 </buttonmap>
