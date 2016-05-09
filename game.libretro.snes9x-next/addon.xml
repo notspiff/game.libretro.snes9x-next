@@ -15,8 +15,10 @@
                    library_wingl="game.libretro.snes9x-next.dll">
 		<platforms>SNES</platforms>
 		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
+		<supports_game_loop>false</supports_game_loop>
 		<supports_vfs>true</supports_vfs>
-		<supports_no_game>false</supports_no_game>
+		<supports_standalone>false</supports_standalone>
+		<supports_keyboard>false</supports_keyboard>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Snes9x-Next v1.52.4</summary>
@@ -26,7 +28,8 @@ Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
 
 License: Incompatible (GPLv2 &amp; Non-commercial)
 
-Icon credit: Alucryd (alucryd.deviantart.com)</description>
+Icon credit: HarryBana (harrybana.deviantart.com)</description>
+		<license>Non-commercial</license>
 		<platform>all</platform>
 		<nofanart>true</nofanart>
 	</extension>
