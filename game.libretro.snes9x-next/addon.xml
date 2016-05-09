@@ -15,7 +15,7 @@
                    library_wingl="game.libretro.snes9x-next.dll">
 		<platforms>SNES</platforms>
 		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
-		<supports_game_loop>false</supports_game_loop>
+		<supports_game_loop>true</supports_game_loop>
 		<supports_vfs>true</supports_vfs>
 		<supports_standalone>false</supports_standalone>
 		<supports_keyboard>false</supports_keyboard>
