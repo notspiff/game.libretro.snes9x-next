@@ -8,11 +8,7 @@
 		<import addon="game.controller.snes" version="1.0.0"/>
 	</requires>
 	<extension point="kodi.gameclient"
-                   library_android="libgame.libretro.snes9x-next.so"
-                   library_linux="game.libretro.snes9x-next.so"
-                   library_osx="game.libretro.snes9x-next.dylib"
-                   library_windx="game.libretro.snes9x-next.dll"
-                   library_wingl="game.libretro.snes9x-next.dll">
+                   library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>SNES</platforms>
 		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
 		<supports_game_loop>true</supports_game_loop>
@@ -30,7 +26,7 @@ License: Incompatible (GPLv2 &amp; Non-commercial)
 
 Icon credit: HarryBana (harrybana.deviantart.com)</description>
 		<license>Non-commercial</license>
-		<platform>all</platform>
+		<platform>@PLATFORM@</platform>
 		<nofanart>true</nofanart>
 	</extension>
 </addon>
