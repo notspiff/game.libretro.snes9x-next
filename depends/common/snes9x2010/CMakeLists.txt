@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(snes9x-next)
+project(snes9x2010)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 
@@ -37,8 +37,8 @@ externalproject_add(${PROJECT_NAME}
                     BUILD_IN_SOURCE 1)
 
 #install the generated shared library
-install(FILES ${PROJECT_SOURCE_DIR}/snes9x_next_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
+install(FILES ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # write the config.cmake script
-file(WRITE ${CMAKE_INSTALL_PREFIX}/libretro-snes9x-next-config.cmake "set(SNES9X-NEXT_LIB ${CMAKE_INSTALL_PREFIX}/lib/snes9x_next_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})")
+file(WRITE ${CMAKE_INSTALL_PREFIX}/libretro-${PROJECT_NAME}-config.cmake "set(SNES9X2010_LIB ${CMAKE_INSTALL_PREFIX}/lib/${PROJECT_NAME}_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})")
