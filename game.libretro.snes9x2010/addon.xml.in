@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.snes9x2010"
-		name="SNES (Snes9x 2010)"
+		name="SNES / Super Famicom (Snes9x 2010)"
 		version="1.52.4"
 		provider-name="Libretro">
 	<requires>
@@ -8,17 +8,17 @@
 		<import addon="game.controller.snes" version="1.0.0"/>
 	</requires>
 	<extension point="kodi.gameclient"
-                   library_@PLATFORM@="@LIBRARY_FILENAME@">
+			library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>SNES</platforms>
 		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
-		<supports_game_loop>true</supports_game_loop>
 		<supports_vfs>true</supports_vfs>
 		<supports_standalone>false</supports_standalone>
 		<supports_keyboard>false</supports_keyboard>
+		<supports_mouse>false</supports_mouse>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Snes9x 2010</summary>
-        <description>Port of Snes9x 1.52+ to Libretro (previously called SNES9x Next). Rewritten in C and several optimizations and speedhacks.
+		<summary lang="en">SNES / Super Famicom (Snes9x 2010) 1.52.4</summary>
+		<description>Port of Snes9x 1.52+ to Libretro (previously called SNES9x Next). Rewritten in C and several optimizations and speedhacks.
 
 Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
 
@@ -27,6 +27,8 @@ License: Incompatible (GPLv2 &amp; Non-commercial)
 Icon credit: HarryBana (harrybana.deviantart.com)</description>
 		<license>Non-commercial</license>
 		<platform>@PLATFORM@</platform>
-		<nofanart>true</nofanart>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
 	</extension>
 </addon>
