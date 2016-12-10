@@ -28,7 +28,7 @@ Icon credit: HarryBana (harrybana.deviantart.com)</description>
 		<license>Non-commercial</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
-			<icon>icon.png</icon>
+			<icon>resources/icon.png</icon>
 		</assets>
 	</extension>
 </addon>
