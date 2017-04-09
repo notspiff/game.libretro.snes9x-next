@@ -20,9 +20,9 @@
 		<summary lang="en">SNES / Super Famicom (Snes9x 2010) 1.52.4</summary>
 		<description>Port of Snes9x 1.52+ to Libretro (previously called SNES9x Next). Rewritten in C and several optimizations and speedhacks.
 
-Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc
+Icon credit: HarryBana (harrybana.deviantart.com)
 
-Icon credit: HarryBana (harrybana.deviantart.com)</description>
+Supported files: .smc, .fig, .sfc, .gd3, .gd7, .dx2, .bsx, .swc</description>
 		<license>Non-commercial</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
